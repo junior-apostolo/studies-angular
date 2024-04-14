@@ -48,3 +48,16 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 | `ng test [project]` | Executa testes unitários em um projeto. |
 | `ng update [packages..]` | Atualiza seu espaço de trabalho e suas dependências. |
 | `ng version` | Exibe a versão do Angular CLI. |
+
+
+## Estilos css
+
+**O arquivo de estilo css global não vai sobrepor o arquivo de estilo do componente.**
+
+Ordem de sobreposição dos estilo: estilo do Decorator -> estilo do componente -> estilo global
+
+# Seletores
+`:host` ele é um seletor especial que se refere ao componente em que esta sendo usado é usado 
+para aplicar estilos diretamente ao componente em si, em vez de seus elementos filhos.
+`:host-context` ele é um seletor que permite aplicar estilos com base no contexto do componente pai. Isso é util quando voce deseja aplicar estilos com base em condições no componente pai. 
+`::ng-deep` ele é um mecanismo que permite que os estilos definidos em um componente seja aplicados aos elementos. Em outras palavras, ele permite que voce contorne o encapsulamento de estilos em componentes. No entanto é importante notar que o uso excessivo de ::ng-deep pode tornar o código mais dificil de mante e pode não ser a melhor prática em muitos casos.
