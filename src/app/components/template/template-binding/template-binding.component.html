@@ -1,0 +1,37 @@
+<!-- <h2>Template</h2>
+<p>template-binding works!</p>
+
+<h2>Text Interpolation</h2>
+<p>{{ name }} - {{ age }}</p>
+<hr>
+
+<h2>Property binding</h2>
+<button [disabled]="isDisable">Button</button>
+<hr>
+
+<h2>Attribute binding</h2>
+<p [attr.aria-label]="name">Teste</p>
+<hr>
+
+<h2>Class and Style binding</h2>
+<p [class.background-red]="age >= 32" [class.background-blue]="age > 32">{{name}}</p>
+<p [style.text-decoration]="isTextDecoration" >{{age}}</p>
+<hr>
+
+<h2>Event binding</h2>
+
+<button (click)="sub()">-</button>
+<button (click)="sum()">+</button>
+<input (keydown.shift.t)="onKeyDown($event)" type="text" name="" id="">
+
+<div (mousemove)="onMouseEvent($event)" style="background:  red; width: 300px; height: 300px; margin-top: 10px;"></div>
+<hr> -->
+
+<h2>Two-way binding</h2>
+<input [(ngModel)]="name" type="text">
+
+{{name}}
+<hr>
+
+<h2>Diretivas de atributo</h2>
+<div [ngClass]="{'background-red': isDisable}">Classes condicionais</div>
