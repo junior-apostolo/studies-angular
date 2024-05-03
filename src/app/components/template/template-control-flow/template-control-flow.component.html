@@ -1,0 +1,23 @@
+<h2>Control Flow</h2>
+<h3>IF e FOR</h3>
+<!-- Forma Nova-->
+@if (loadingData$ | async; as data) {
+  <ul>
+    @for (item of data; track item) {
+      <li>{{item}}</li>
+    }
+  </ul>
+} @else {
+  <p>Carregando...</p>
+}
+
+<!-- Forma Antiga-->
+<ng-container *ngIf="loadingData$ | async as data; else loading">
+  <ul>
+    <ng-container *ngFor="let item of data; trackBy: trackByFn">
+      <li>{{item}}</li>
+    </ng-container>
+  </ul>
+</ng-container>
+<ng-template #loading><p>Carregando...</p></ng-template>
+
