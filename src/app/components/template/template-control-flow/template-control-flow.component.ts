@@ -11,7 +11,9 @@ import { Observable, delay, of } from 'rxjs';
 })
 export class TemplateControlFlowComponent {
   public isTrue = false
+  public switchCondition = 'A'
 
+  public itens: Array<{name: string}> = [{name: 'Thomas Shelby'}]
   public loadingData$: Observable<string[]> = of([
     'item 1',
     'item 2',

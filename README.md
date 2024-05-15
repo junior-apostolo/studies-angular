@@ -61,3 +61,11 @@ Ordem de sobreposição dos estilo: estilo do Decorator -> estilo do componente 
 para aplicar estilos diretamente ao componente em si, em vez de seus elementos filhos.
 - `:host-context` ele é um seletor que permite aplicar estilos com base no contexto do componente pai. Isso é util quando voce deseja aplicar estilos com base em condições no componente pai. 
 - `::ng-deep` ele é um mecanismo que permite que os estilos definidos em um componente seja aplicados aos elementos. Em outras palavras, ele permite que voce contorne o encapsulamento de estilos em componentes. No entanto é importante notar que o uso excessivo de ::ng-deep pode tornar o código mais dificil de mante e pode não ser a melhor prática em muitos casos.
+
+## Control Flow - controle de fluxo
+
+No Angular, o controle de fluxo é a capacidade de controlar a ordem em que o código é executado.
+
+Ele é usado para executar código condicionalmente, iterar sobre coleções e repetir código.
+
+O controle de fluxo é uma ferramenta essencial para o desenvolvimento de aplicações Angular. Ele permite que você crie aplicativos mais complexos e interativos.
