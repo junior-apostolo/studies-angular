@@ -1,0 +1,25 @@
+<!--
+
+  on - especifica uma condição de acionador usando um acionador da lista.
+  (idle, timer, viewport, interaction, hover, immediate, prefetch)
+
+  when - especifica uma condição imperativa como uma expressão que retorna
+  um booleano. Quandoesta expressão se torna verdadeira, o espaço reservado
+  é trocado pelo conteudo carreagado lentamente (o que pode ser uma operação
+  assincrona se as dependencias precisarem ser buscadas).
+
+  obs: Vários on triggers são sempre condições OR. Da mesma forma, on misturado
+  com when também são condições OR.
+  -->
+
+<h2 #trigger>Deferrable Views</h2>
+
+@defer(on timer(3s); on interaction(trigger); on hover){
+  <app-new-component/>
+} @placeholder() {
+  <p #trigger2>Mostrar antes de carregar algo.</p>
+} @loading() {
+  <p>Loading...</p>
+} @error {
+  <p>Loading failed...</p>
+}
