@@ -1,0 +1,13 @@
+<h2>signals works!</h2>
+
+<p>{{ firstName() }} {{ lastName() }}</p>
+<p>Full Name: {{ fullName() }}</p>
+
+<ul>
+  @for (item of array(); track $index) {
+  <li>{{ item }}</li>
+  }
+</ul>
+
+<button (click)="updateName()">Update Name</button>
+<button (click)="updateArray()">Update Array</button>
